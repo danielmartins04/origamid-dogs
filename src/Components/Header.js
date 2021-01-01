@@ -10,7 +10,6 @@ const Header = () => {
                 <Link className={styles.logo} to="/" aria-label="Dogs - Home">
                     <Dogs />
                 </Link>
-
                 <Link className={styles.login} to="/login">Login / Criar</Link>
             </nav>
         </header>
