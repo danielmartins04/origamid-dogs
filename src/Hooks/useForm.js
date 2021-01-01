@@ -8,7 +8,7 @@ const types = {
 }
 
 const useForm = (type) => {
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState('email');
     const [error, setError] = useState(null);
 
     function validate(value) {
@@ -17,6 +17,7 @@ const useForm = (type) => {
             setError('Preencha um valor.');
             return false;
         } else if (types[type] && !types[type].regex.test(value)) {
+            console.log(types[type].regex.test(value));
             setError(types[type].message);
             return false;
         } else {
@@ -25,9 +26,8 @@ const useForm = (type) => {
         }
     }
 
-    function onChange({ target }) {
-        if (error) 
-            validate(target.value);
+    function onChange({ target }) {        
+         validate(target.value);
 
         setValue(target.value);
     }
