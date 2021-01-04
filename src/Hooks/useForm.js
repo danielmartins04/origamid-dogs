@@ -17,7 +17,7 @@ const useForm = (type) => {
             setError('Preencha um valor.');
             return false;
         } else if (types[type] && !types[type].regex.test(value)) {
-            console.log(types[type].regex.test(value));
+            //console.log(types[type].regex.test(value));
             setError(types[type].message);
             return false;
         } else {
