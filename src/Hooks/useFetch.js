@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 function useFetch() {
     const [data, setData] = useState(null);
@@ -22,7 +22,7 @@ function useFetch() {
             setLoading(false);
             return { response, json };
         }
-    })
+    }, []);
 
     return {
         data, 
