@@ -20,7 +20,7 @@ function App() {
                 <Route path="login/*" element={<Login />} />
                 <ProtectedRoute path="conta/*" element={<User />} />
               </Routes>
-              
+              <Footer />
           </UserStorage>
         </BrowserRouter>
     </div>
